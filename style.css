@@ -1,0 +1,521 @@
+/*CSS Reset / Normalize*/
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+   --cor-de-About: #EAF2FD;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+   
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
+de utiliza-la. 
+
+Mas o que é o BEM?
+
+BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
+web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
+Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
+de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
+
+Link da documentação oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sessão Menu*/
+
+section.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto 10px;   
+}
+header {
+    display: flex;
+}
+
+header img {
+    height: 1.5em;
+    align-self: center;
+    margin-right: 20px;
+}
+
+
+.menu__list {
+    display: flex;
+    font-size: 1em;
+}
+
+.menu__list__item {
+    margin: 20px;
+}
+.menu__list__item:hover{
+    border-bottom: 2px solid #2A7AE4
+}
+
+/*Sessão Title*/
+section.title{
+    margin: 80px auto auto auto;
+}
+.title__div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin: auto 1em;    
+}
+.title__profile {
+    width: 368px;
+    height: 500px;
+}
+
+.title__bio {
+    font-size: 3.5em;
+    padding-top: 100px;
+}
+
+.title__subsection {
+    font-size: 1.4em;
+    font-weight: 10;
+}
+
+.title__network {
+    display: flex;    
+}
+.title__network__item{
+    margin: 1em;
+}
+
+.title__network__item:hover{
+    border-bottom: 2px solid #2A7AE4;
+}
+.menu__list__item__contato {
+    display: none;
+}
+
+
+/*Sessão About*/
+
+section.about{
+    display: flex; 
+    background: var(--cor-de-About);
+    margin: auto;
+   
+ 
+}
+
+.about__container {
+    width: 1440px;
+    height: 383px;
+    margin: auto ;
+    padding: 15px;
+}
+
+.about__title {
+ font-size: 2em;
+}
+
+.about__paragraph {
+    margin: 30px auto;
+}
+/*Sessão Hobbies*/
+
+.skills {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 2em;      
+}
+.skills__line {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;  
+}
+.skills__box{
+    display: flex;
+    align-items: flex-end;
+    width: 176px;
+    height: 174px;
+    margin: 10px;    
+    background: #FFFFFF;    
+}
+
+.skills__box:hover {
+    background: var(--cor-de-About);
+}
+
+.skills__name {
+    font-size: 0.5em;
+    margin-top: 5px;
+}
+/*2 parte*/
+.hobbies {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 2em;      
+}
+.hobbies__line {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;  
+}
+.hobbies__box{
+    display: flex;
+    align-items: flex-end;
+    width: 176px;
+    height: 174px;
+    margin: 10px;    
+    background: #FFFFFF;
+    
+}
+
+.hobbies__box:hover{
+    background: var(--cor-de-About);
+}
+
+.hobbies__name {
+    font-size: 0.5em;
+    margin-top: 5px;
+}
+/* Experiência Acadêmica*/
+
+section.academic{
+    background: var(--cor-de-About);
+    padding: 80px 0;    
+}
+.academic__courses{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.academic {    
+    text-align: center;
+}
+
+.academic__courses__item__img  {
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+    width: 368px;
+    height: 286px;
+    background: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.academic__courses__item__img img {
+    width: 192px;
+    height: 130px;
+}
+.academic__courses__item__title {
+    padding-left: 20px;
+    font-size: 22px;
+    text-align: left;
+}
+.academic__courses__item__subtitle{
+    padding-left: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+/* experiência*/
+
+.experience{
+    margin-top: 100px;
+}
+.experience__section__title  {
+    text-align: center;
+    font-size: 2em;
+}
+.experiencie__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+
+.experiencie__box:nth-child(3){
+    flex-direction: row-reverse;
+}
+
+.experiencie__box:nth-child(5){
+    flex-direction: row-reverse;
+}
+
+.experience__img {
+    width: 752px;
+    height: 406px;
+}
+
+.experience__info {
+    margin: 20px;
+    align-self: center;
+}
+
+.experience__title {
+    font-size: 22px;
+}
+
+.experience__text {
+    font-size: 16px;
+    font-weight: 1;
+    color: #464646;
+}
+
+.experience__repo a button{    
+    width: 185px;
+    height: 51px;
+    background: #F5F5F5;
+    color: #2A7AE4;
+    border: 2px solid #2A7AE4;
+}
+
+.experience__repo:hover  a button{
+    background: #2A7AE4;
+    color: #F5F5F5;
+}
+
+.experience__demo a button{   
+    width: 185px;
+    height: 51px;
+    background: #2A7AE4;
+    color: #FFFFFF;
+    border: none;
+}
+
+.experience__demo:hover a button{
+    background: #F5F5F5;
+    color: #2A7AE4;
+    border: 2px solid #2A7AE4;
+}
+/*Contato*/
+.formcontato__text {
+    margin-left: 40px;
+}
+
+.formcontato__title {
+    font-size: 2em;
+}
+
+.formcontato__subtext {
+    font-size: 1em;
+    font-weight: 1;
+}
+
+.formcontato__contacto{
+    height: 100vh;
+    background: #EAF2FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formcontato__img {
+    width: 464px;
+    height: 593px;
+}
+.formcontato__text {
+    width: 664px;
+    height: 593px;
+}
+
+.formcontato__input {
+    border-top: none;
+    border-left: none;
+    border-right: none;    
+    border-bottom:1px solid #2A7AE4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 656px;
+    height: 56px;
+}
+
+.formcontato__textarea {
+    border-top: none;
+    border-left: none;
+    border-right: none;    
+    border-bottom:1px solid #2A7AE4;
+    margin-bottom: 20px;
+    width: 656px;
+    height: 56px;
+}
+
+.formcontato__botao {    
+    width: 165px;
+    height: 51px;
+    background: #2A7AE4;
+    color: #FFFFFF;
+    border: none;
+}
+
+.formcontato__botao:hover {
+    background: #F5F5F5;
+    color: #2A7AE4;
+    border: 2px solid #2A7AE4;
+    width: 200px;
+}
+/*footeer*/
+
+section.footer{
+   background: #FFFFFF;
+   text-align: center;
+   padding: 20px;
+}
+
+.footer__rodape {
+    height: 150px;
+    font-size: 1em;
+}
+
+
+/*Tablet*/
+
+
+@media screen and  (max-width: 768px) {
+
+/* Menu */
+.title__bio{
+    font-size: 24px;
+}
+
+.title__subsection{
+    font-size: 16px;
+}
+
+.title__network__item{
+    font-size: 12px;
+}
+.font__title{
+    font-size: 24px;
+}
+
+
+.formcontato__subtext{
+    font-size: 12px;
+}
+
+.title__profile  {
+    width: 300px;
+    height: 300px;
+}
+.menu__list__item {
+    display: none;
+}
+.menu__list__item__contato {
+    
+    display: inherit;
+
+}
+
+.formcontato__img{
+    padding-left: 20px;
+    width: 264px;
+    height: 393px;
+}
+.formcontato__input {
+    width: 300px;
+    height: 46px;
+}
+.formcontato__textarea {
+    width: 300px;
+    height: 46px;
+}
+.experience__img{
+    width: 500px;
+    height: 300px;
+}
+
+.footer__rodape {
+    height: 170px;
+}
+
+
+}
+
+
+/*Mobile
+
+*/
+
+@media screen and (max-width: 425px) {
+
+    
+    /*Menu*/
+    .menu__title{
+        font-size: 12px;
+    }
+    
+    .menu__list__item__contato{
+        font-size: 12px;
+    }
+    /*Titulo*/
+    
+    .title__profile {
+        display: none;
+    }
+    
+    
+    
+    /*Formação */
+    .academic__courses__item__img{
+        width: 300px;
+        height: 200px;
+    }
+    
+    /*experiencia*/
+
+    .experience__img{
+        width: 300px;
+        height: 200px;
+    }
+       
+    
+    
+    .experience__repo a button {
+        margin: 10px 0;
+    }
+          
+    
+     .formcontato__img{
+        width: 100px;
+        height: 200px;
+        
+    }
+    .formcontato__input {
+        font-size: 10px;
+        width: 200px;
+        height: 30px;
+    }
+    .formcontato__textarea {
+        font-size: 10px;
+        width: 200px;
+        height: 30px;
+    }
+    
+    
+    /*Footer*/
+    
+    .footer__rodape {
+        height: 50px;
+    }
+    }
+    
+
+
